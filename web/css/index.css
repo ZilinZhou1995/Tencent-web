@@ -1,0 +1,375 @@
+body{
+	font-family:"Hiragino Sans GB W6","Hiragino Sans GB W3";
+}
+
+a:hover{
+	text-decoration:none;
+}
+/*nav***************************/
+#navbarone {
+	background-color:#f1faf8;
+	border:hidden;
+}
+
+#navright{
+	margin-top:7px;
+	}
+	
+#navbarsearch {
+	margin-left:60px;
+}
+
+#navbarimg {
+	height:50px;
+	margin-left:-40px;
+	position:absolute;
+}
+
+
+.btn-link{
+	margin:0px;
+	padding:5px;
+	color:#666666;
+}
+
+
+#button_signin{
+	background-color:#f1faf8;
+	color: #333;
+}
+
+#button_signin a{
+	color: #333;
+}
+
+#button_lognin{
+	margin-left:120px;
+	background-color:#7ddad3;
+	height:25px;
+	line-height:12.5px;
+	width:80px;
+	border-radius:8px;
+}
+#navright button{
+
+	-webkit-transition-property:color;
+	-webkit-transition-duration:.7s;
+	-webkit-transition-timing-function:ease-out;
+		text-decoration:none;
+}
+
+
+#navright button:hover{
+	color:#DC4345;
+	
+	
+}
+/********************* jum ************************/
+
+.jum-header-color{
+	color:#D7CECC;
+}
+
+#jumbot{
+	margin-top:60px;
+
+	background-image:url(../image/headerbg.png);
+	background-size:100%;
+	background-repeat:no-repeat;
+	background-color:#7adbd5;
+	height:670px;
+	background-position:bottom center;
+	color:#FFFFFF
+}
+
+#jumcontent {
+	width:535px;
+	float:right;
+	margin-top:53px;
+	margin-left:500px;
+	margin-right:100px;
+}
+
+#jumcontent h3{
+	color:#1C6065;
+	
+}
+
+#jumbutton {
+	margin-top:40px;
+	margin-right:100px;
+	float:right;
+	
+}
+
+#jumbutton label{
+	color:#1C6065;
+}
+
+#inputaccount{
+	border-radius:10px;
+	width:270px;
+}
+
+#inputpwd{
+	border-radius:10px;
+	width:270px;
+}
+
+#inputlogin{
+	margin-top:30px;
+	float:right;
+	height:30px;
+	width:110px;
+	line-height:15px;
+	background-color:#f36076;
+	border-radius:10px;
+}
+
+/***********************body model show***************************/
+		
+.info-show-div{
+	margin-bottom:50px;
+	align-content:center;
+}
+
+#show-content{
+	margin-right:auto;
+	width:90%;
+}
+
+#show{
+	margin-left:auto;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-index-content {
+    font-size: 1.13333em;
+    line-height: 1.4em;
+    color: white;
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    max-width: 20em;
+    opacity: 0;
+	background-size:;
+	
+	
+    transition: all .3s ease-out; }
+
+.project-index-content:hover
+{
+    font-size: 1.13333em;
+    line-height: 1.4em;
+    color: white;
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    max-width: 20em;
+	background-size:100%;
+  
+  background-color:#C8282A;
+  /* for IE */
+  filter:alpha(opacity=80);
+    /* CSS3 standard */
+  opacity:0.8;
+  
+}
+
+.background1
+{
+  width: 100%;
+  height: 370px;
+  background: url(../image/fwlanding-plando-936.png) no-repeat;
+  background-size:100%;
+}
+
+.background2
+{
+  width: 100%;
+  height: 370px;
+  background:	url(../image/fwlanding-mavis-1100.jpg) no-repeat;
+  background-size:100%;
+}
+
+.background3
+{
+  width: 100%;
+  height: 370px;
+  background:	url(../image/fwlanding-global-generation-1100.jpg)  no-repeat;
+  background-size:100%;
+}
+
+.background4
+{
+  width: 100%;
+  height: 370px;
+  background:	url(../image/fwlanding-sustrans-travel-challenges-1100.png)  no-repeat;
+  background-size:100%;
+}
+
+
+.transbox:hover
+{
+  width: auto;
+  height: 370px;
+  background-color:#EE6265;
+  /* for IE */
+  color:#FFFFFF
+  
+  filter:alpha(opacity=0);
+  /* CSS3 standard */
+  opacity:0.9;
+  
+ 
+}
+
+.transbox{
+	width: auto;
+  height:370px;
+  margin-right:-16px;
+  
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.0;
+	-webkit-transition:all .7s ease-out;
+	margin-left:-15px;
+	border:#FFFFFF solid 1px;
+}
+
+.transbox p
+{
+  margin: 0px 0px;
+  color:#FFFFFF;
+  padding:150px 30px 60px 20px;
+  text-decoration:none;
+  
+}
+
+
+/********************note part*********************************/
+#note a{
+	color:#88878c;
+	
+}
+
+.note-padding{
+	padding-top:50px;
+}
+
+#note h4{
+	color:#e73843;
+}
+
+.note-margin{
+	margin-top:30px;
+}
+
+
+
+.note-transform{
+	-webkit-transition:all .4s ease-out;
+}
+
+.note-transform:hover{
+	
+	color:#b5b5b7;
+	-webkit-transition:all .4s ease-out;
+}
+
+
+.note-transform h4:hover{
+	color:#6dc9c4;
+	-webkit-transition:all .4s ease-out;
+}
+
+.note-transform-p:hover{
+	color:#6dc9c4;
+}
+	
+/**************************set the bg*****************************/
+
+.set-bg{
+	background-color:#f1f1f1;
+}
+
+/*************project*************/
+
+#activity {
+	align-content:center;
+	text-align:center;
+	background-color:#1dc3b2;
+	color:#FFFFFF;
+	font-size:60px;
+	padding-top:70px;
+	
+}
+
+.project-content{
+	font-size:10px;
+	padding-top:60px;
+	padding-bottom:150px;
+}
+
+#print {
+	text-align:center;
+	background-color:#fb5a5b;
+	color:#FFFFFF;
+	font-size:60px;
+	padding-top:70px;
+}
+
+#grade{
+	text-align:center;
+	background-color:#989898;
+	color:#FFFFFF;
+	font-size:60px;
+	padding-top:70px;
+	
+}
+
+#inputkey input {
+	width:60px;
+}
+
+#inpuotname {
+	}
+
+#inpuotpwd{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+	
+/*-------------------------------
+	Footer
+________________________________*/
+
+footer{
+	background-color:#fff;
+	color:#6c6d70;
+	font-size:11px;
+	padding:20px;
+}
+
+#footer-contact{
+	color:989898;
+}
+
+footer img{
+	opacity:0.3;
+	margin-top:30px;
+	margin-right:20px;
+}
+
+
+/************************/

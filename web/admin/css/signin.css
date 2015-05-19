@@ -1,0 +1,167 @@
+body{
+	font-family:"Hiragino Sans GB W6","Hiragino Sans GB W3";
+	color: #656565;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+
+/*nav***************************/
+#navbarone {
+	background-color:#f1faf8;
+	border:hidden;
+}
+
+#navright{
+	margin-top:7px;
+	}
+	
+#navbarsearch {
+	margin-left:60px;
+}
+
+#navbarimg {
+	height:50px;
+	margin-left:-40px;
+	position:absolute;
+}
+
+
+.btn-link{
+	margin:0px;
+	padding:5px;
+	color:#666666;
+}
+
+
+#button_signin{
+	background-color:#f1faf8;
+}
+
+#button_lognin{
+	margin-left:120px;
+	background-color:#7ddad3;
+	height:25px;
+	line-height:12.5px;
+	width:80px;
+	border-radius:8px;
+}
+#navright button{
+
+	-webkit-transition-property:color;
+	-webkit-transition-duration:.7s;
+	-webkit-transition-timing-function:ease-out;
+		text-decoration:none;
+}
+
+
+#navright button:hover{
+	color:#DC4345;
+	
+	
+}
+
+/*********************body title*********************/
+#body-title h3{
+	float: right;
+	color: #a3a3a3;
+}
+
+#body-title small{
+	color: #a3a3a3;
+}
+
+/********************* jum ************************/
+
+#body-container{
+	width: 75%;
+	margin:100px auto;
+}
+
+.glyphicon-user{
+	font-size:20px;	
+	position: relative;
+	margin-left:20px;
+	width: 30px;
+	line-height: 50%;
+}
+
+.btn{
+	height: 50px;
+}
+
+/*********sidebar***********/
+
+#sidebar{
+	margin-top: 30px;
+	margin-right: 50px;
+
+	padding: 10px 12px ;
+	}
+
+
+.glyphicon-ok{
+	color: #7ddad2;
+	width: 20px;
+	
+}
+
+.sidebar-table2{
+	border-top: 1px solid #7ddad2;	
+}
+
+
+#div_5 {
+	
+	border:rgba(215,205,204,1.00) 1px solid;
+	border-radius:5px;
+	width:230px;
+	height:250px;
+}
+
+#div_5 p{margin:10px;}
+#div_5 h4{
+	margin: 10px;
+}
+
+#div_5 span{
+	width: 20px;
+	margin-left: 10px;
+}
+/***************content bar***********/
+.col-md-8 input{
+	width: 550px;
+}
+
+#content-button{
+	width: 100px;
+	height: 30px;
+	background-color: #7ddad2;
+	margin-top:30px;
+	margin-right: 60px;
+	text-align: center;
+	color: #ffffff;
+	border: 0px;
+	line-height: 50%;
+}
+
+#content small{
+	color: #b7b7b7;
+	margin-bottom: 70px;
+	
+}
+
+#content h5{
+	margin-top: 30px;
+}
+
+#content input{
+	border: 1.5px solid #7ddad2;
+}
+
+#content div div p{
+	margin-top: 10px;
+	
+}
