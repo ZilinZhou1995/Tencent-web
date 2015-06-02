@@ -1,0 +1,66 @@
+body{
+	font-family:"Hiragino Sans GB W6","Hiragino Sans GB W3";
+}
+
+a:hover{
+	text-decoration:none;
+}
+/*nav***************************/
+#navbarone {
+	background-color:#f1faf8;
+	border:hidden;
+}
+
+#navright{
+	margin-top:7px;
+	}
+	
+#navbarsearch {
+	margin-left:60px;
+}
+
+#navbarimg {
+	height:50px;
+	margin-left:-40px;
+	position:absolute;
+}
+
+
+.btn-link{
+	margin:0px;
+	padding:5px;
+	color:#666666;
+}
+
+
+#button_signin{
+	background-color:#f1faf8;
+	color: #333;
+}
+
+#button_signin a{
+	color: #333;
+}
+
+#button_lognin{
+	margin-left:120px;
+	background-color:#7ddad3;
+	height:25px;
+	line-height:12.5px;
+	width:80px;
+	border-radius:8px;
+}
+#navright button{
+
+	-webkit-transition-property:color;
+	-webkit-transition-duration:.7s;
+	-webkit-transition-timing-function:ease-out;
+		text-decoration:none;
+}
+
+
+#navright button:hover{
+	color:#DC4345;
+	
+	
+}

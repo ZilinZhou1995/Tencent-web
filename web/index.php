@@ -1,3 +1,5 @@
+<?php require_once('navbar.php') ?>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -9,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>xianfengdui</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,86 +33,8 @@
   <body>
 
 <!--BODY***********************-->
-  <nav class="navbar navbar-fixed-top" id="navbarone">
-      <div class="container">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button> 
-       
-          <div><a class="navbar-brand" href="#"></a><img src="image/logo.png" class="img-responsive" alt="Responsive image" id="navbarimg"></div>
-        </div><!--end navbar-header-->
-
-        <form class="navbar-form navbar-left" role="search" id="navbarsearch">
-         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-         </div>
-                  <span class="glyphicon glyphicon-search "></span>
-        </form>
-        
-        <div id="navbar" class="navbar-collapse collapse">
-        
-          <div class="navbar-right" id="navright">
-          
-            
-            <button type="button" class="btn btn-link">首页</button>
-            <button type="button" class="btn btn-link">公告</button>
-            <button type="button" class="btn btn-link">物料</button>
-            <button type="button" class="btn btn-link">礼品</button>
-            <button type="button" class="btn btn-link">绩效</button>
-            <button type="button" class="btn btn-link" id="navright-show">展示</button>
-            <button type="button" class="btn" data-toggle="modal" data-target="#mymodal" id="button_lognin">登录</button>
-            <button type="button" class="btn" id="button_signin" ><a href="signin.html">注册</a></button>
-            
-       
-          </div><!--navbar-right-->
-
-          </div><!--navbar-collapse-->
-
-        </div><!--contain-->
-
-    </nav>
-    <!--modal here**********************************************-->
-    
-            <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">登录</h4>
-                  </div>
-                  <div class="modal-body">
-                  
-                     <form action="login.php" method="post" class="form-horizontal">
-                      <label class="col-lg-2 control-label" for="inputname">用户名</label>
-                        <div class="col-lg-10">
-                          <input class="form-control" id="inpuotname" name="name" placeholder="name" type="text">
-                        </div>
-                     
-                      <label class="col-lg-2 control-label" for="inputpasscode">密码</label>
-                        <div class="col-lg-10">
-                          <input class="form-control" id="inpuotpwd" name="password"placeholder="password" type="text">
-                        </div>
-                    
-                        
-                 
-                  
-                  <div class="modal-footer">
-                  	<button type="button" class="btn btn-default data-dismissal">取消</button>
-       				<button type="submit" class="btn btn-primary">登录</button>
-                  </div>
-                   </form>
-                    </div><!--end modal-body-->
-                   
-                  </div>
-              </div>
-            </div>
-
-    
+     
+   
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
   
@@ -120,6 +44,12 @@
         <p class="content-normal">先锋，是一种姿态拒绝平庸不明距离先锋是一泓阿萨德咖啡机撒旦立刻叫阿爽好噶设立科技噶双打冠军阿萨德撒旦了卡速度哈快来嘎说活着就是为了改变世界</p>
     	</div><!--end div jum content-->
         <div id="jumbutton">
+        <?php 
+        	if (isset($_SESSION['name'])) {
+        	
+        } 
+        	else {
+        		?>
         	<form action="login.php" method="post">
             	<div class="form-group">
                 	<label for="inputname">用户名</label>
@@ -127,13 +57,14 @@
                 
                 
 					<label for="inputpwd">密码</label>
-                    <input type="text" class="form-control" id="inputpwd" name="password">
+                    <input type="password" class="form-control" id="inputpwd" name="password">
                	</div>
                 <button type="submit" class="btn" id="inputlogin">登录</button>
             </form>
+            <?php } ?>
         </div><!--end div jumbutton-->
     </div>
-
+		
   <div class="container-fluid center-block"" id="show" >
     
   <div class="container  id="show-content">

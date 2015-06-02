@@ -1,0 +1,37 @@
+/*************personalinfo***************/
+#personalinfo{
+	margin-top: 30px;
+}
+
+/**************acitivity***************/
+.sidenav{
+		float: left;
+}
+.sidenav button{
+	width: 335px;
+	height: 100px;
+	text-align: right;
+	border:0;
+}
+.sidenav a{
+	color: #d7cdcc;
+	font-size: 1.5em;
+}
+
+.btn-act{
+	background-color: #eae6e5;
+}
+.btn-sup{
+	background-color: #f4ecea;
+}
+.btn-pro{
+	background-color: #f7f5f6;
+}
+
+.sidebar{
+	width: 100%;
+	height: 500px;
+}
+
+
+

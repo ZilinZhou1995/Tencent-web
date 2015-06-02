@@ -31,47 +31,8 @@
 <body>
 
 	<!--************************** nav here ***********************-->
-	<nav class="navbar navbar-fixed-top" id="navbarone">
-    	<div class="container">
-
-        	<div class="navbar-header">
-          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            		<span class="sr-only">Toggle navigation</span>
-            		<span class="icon-bar"></span>
-            		<span class="icon-bar"></span>
-            		<span class="icon-bar"></span>
-          		</button> 
-       
-          		<div><a class="navbar-brand" href="#"></a><img src="image/logo.png" class="img-responsive" alt="Responsive image" id="navbarimg"></div>
-        	</div><!--end navbar-header-->
-
-        	<form class="navbar-form navbar-left" role="search" id="navbarsearch">
-         		<div class="form-group">
-            		<input type="text" class="form-control" placeholder="Search">
-         		</div>
-                  <span class="glyphicon glyphicon-search "></span>
-        	</form>
-        
-        <div id="navbar" class="navbar-collapse collapse">
-          <div class="navbar-right" id="navright">
-    
-            <button type="button" class="btn btn-link">首页</button>
-            <button type="button" class="btn btn-link">公告</button>
-            <button type="button" class="btn btn-link">物料</button>
-            <button type="button" class="btn btn-link">礼品</button>
-            <button type="button" class="btn btn-link">绩效</button>
-            <button type="button" class="btn btn-link" id="navright-show">展示</button>
-            <button type="button" class="btn" data-toggle="modal" data-target="#mymodal" id="button_lognin">登录</button>
-            <button type="button" class="btn" id="button_signin">注册</button>
-       
-          </div><!--navbar-right-->
-
-          </div><!--navbar-collapse-->
-
-        </div><!--contain-->
-
-    </nav>
-    
+	<?php require_once('navbar.php') ?>
+	    
     <div class="container" id="body-container">
     
     <div id="body-title">
@@ -157,11 +118,7 @@
     
         
     
-    <div id="footer"></div>
-    
-    
-    </div><!--end div container-->
-    
+	    
     
 
 

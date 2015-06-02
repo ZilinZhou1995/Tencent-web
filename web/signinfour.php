@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once('sessionstart.php'); ?>
 <html>
 <head>
 	<title>login</title>
@@ -25,7 +25,7 @@
 		 
 		 		$dbc = mysqli_connect('localhost:3306','root','root','tencent') or die('Error connection_aborted!');
 		 
-		 		$query = "insert into users(icode,nickname,account,password,club,district,realname,age,department,level,school) values ('$icode','$nickname','$account','$password','$club','$district','$realname','$age','$department','$level','$school')";
+		 		$query = "insert into users(icode,nickname,account,password,club,district,realname,age,department,level,school) values ('$icode','$nickname','$account',sha1('$password'),'$club','$district','$realname','$age','$department','$level','$school')";
 		 
 		 		$result = mysqli_query($dbc,$query) or die('error connection_aborted');
 		 
@@ -33,6 +33,7 @@
 		 		
 		 		echo($account);
 		 	?>
-	
+
+		
 </body>
 </html>
