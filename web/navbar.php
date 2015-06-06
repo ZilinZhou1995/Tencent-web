@@ -15,9 +15,9 @@
 
         <form class="navbar-form navbar-left" role="search" id="navbarsearch">
          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control hidden-xs" placeholder="Search">
          </div>
-                  <span class="glyphicon glyphicon-search "></span>
+                  <span class="glyphicon glyphicon-search hidden-xs"></span>
         </form>
         
         <div id="navbar" class="navbar-collapse collapse">

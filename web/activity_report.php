@@ -35,7 +35,7 @@
   	<?php
   		require_once('appvars.php');
 
-  		if (isset($_POST['submit'])) {		
+  		if (isset($_POST{'submit'})) {		
   			$name = $_POST['name'];
   			$date = $_POST['date'];
   			$club = $_POST['club'];

@@ -57,11 +57,11 @@
     <div id="content">
     	<div class="row">
     	  <div class="col-md-8">
-    	  <form action="signinfour" method="post">
+    	  <form enctype="multipart/form-data" action="signinfour" method="post">
     	  	<img src="image/logo2.jpg" alt="sampleforinput" />
   			 <input type="email" class="form-control" id="exampleinput" placeholder="Enter email">
-  			 <label for="exampleInputFile">File input</label>
-  		     <input type="file" id="exampleInputFile">
+  			 <label for="InputFile">File input</label>
+  		     <input type="file" name="infopic" id="exampleInputFile">
   		     <p class="help-block">Example block-level help text here.</p>
   		   	 
   		   	 <input type="hidden" class="form-control" name="invitedcode" placeholder="Text input" value="<?php echo ($_POST['invitedcode']) ?>">

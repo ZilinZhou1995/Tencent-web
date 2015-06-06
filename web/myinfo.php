@@ -36,91 +36,166 @@ require_once('sessionstart.php');
 		require_once('navbar.php');
 		$name =$_SESSION['name'];
 		$pwd = $_SESSION['password'];
-		echo "<h4>welcome to the world,".$name.",good afternoon!</h4>";	
+		echo '<br />';
+		
 	 ?>
 	 <div class="container-fulid">
 		 <div id="personalinfo" class="container">
 		 	
 		 	<div class="row">
-		 			<div class="col-lg-1"></div>
-		 			<div class="col-lg-4"><p>个人信息</p></div>
-		 			<div class="col-lg-6"></div>
-		 			<div class="col-lg-1"></div>
-		 		</div>
+		 			<div class="col-xs-1"></div>
+		 			<div class="col-xs-4"><p class="info_title">个人信息</p></div>
+		 			<div class="col-xs-6"></div>
+		 			<div class="col-xs-1"></div>
+		 	</div>
 		 	
 		 	
 		 	<div class="row">
-		 		<div class="col-lg-1"></div>
-		 		<div class="col-lg-4">
-		 			
-		 			<img src="image/logo2.jpg" alt="infopic" />
-		 		</div>
-		 		<div class="col-lg-6">
-		 			<?php echo $name = $_SESSION['name']; ?>
-		 			腾讯川大俱乐部<br />
-		 			四川大学<br />
-		 			成员<br />
-		 			<div id="modify"><a href="#">修改</a></div>
-		 		</div>
-		 		<div class="col-lg-1"></div>
+		 		<div class="col-xs-1"></div>
+		 			<?php 
+		 				require_once('appvars.php');
+		 				require_once('conn.php');
+		 				$name = $_SESSION['name'];
+		 				$queryPersonalInfo = "SELECT * FROM users WHERE account = '$name'";		 
+		 				$personaldata = mysqli_query($dbc,$queryPersonalInfo);
+		 					if ($person = mysqli_fetch_array($personaldata)) {
+		 						$infopic = $person['infopic'];
+		 						echo '<div class="col-xs-4">';
+		 						echo '<form enctype="multipart/form-data" method="get" action="myinfo_personmodify.php" target="personinfo">';
+		 							echo '<img src="' . GW_UPLOADPATH . $infopic . '" alt="infopic" width="80%" />';
+		 						echo '</div>';
+		 						echo '<div class="col-xs-6">';
+		 						echo '<div width=device>';
+		 							echo '<input type="hidden" name="nickname" value="' . $person['nickname'].'">';
+		 							echo '<input type="hidden" name="club" value="' . $person['club'] . '">';
+		 							echo '<input type="hidden" name="school" value="' . $person['school'] . '">';
+		 							echo '<div id="modify"><a href="myinfo_personmodify.php" target="personinfo"><input type="submit" value="修改"></a></div>';
+		 							echo '<iframe height="50%" frameborder="0" src="myinfo_personinfo.php" name="personinfo"></iframe>';
+		 						}	
+		 						echo '</form>';
+		 						echo '</div>';
+		 						mysqli_close($dbc);
+		 			 ?>
+		 	</div>
+		 						
+
+		 		<div class="col-xs-1"></div>
 		 	</div>
 		 </div><!--end div personalinfo-->
 		 
 		 <div id="activity">
 		 	<div class="row">
+		 	<div class="col-xs-2 col-xs-offset-1">
+		 		<image class="roundpic" src="image/roundblue" alt="pic1" width="10%" />
+		 		<span class="act_title">活动</span>
+		 	</div>
+		 	</div>
+		 	<div class="row">
 		 	
-		 		<div class="col-xs-6 sidenav">
+				<div class="col-xs-2 sidenav">
 		 		    <div class="row">
-			 		<button class="btn-act"><a href="#">我的活动</a></button>
-			 		<button class="btn-sup"><a href="activity_create.php">活动创建</a></button>
-			 		<button class="btn-pro"><a href="#">活动反馈</a></button>
+			 		<button class="btn-act"><a href="activity_myact.php" target="activitychange">我的活动</a></button>
+			 		<button class="btn-sup"><a href="activity_create.php" target="activitychange">活动创建</a></button>
+			 		<button class="btn-pro"><a href="activity_report.php" target="activitychange">活动反馈</a></button>
+			 		</div>
+		 		</div>		 		
+		 		<div class="col-xs-9">
+		 			<iframe height="80%" width="100%" scrolling="no" frameborder="0" src="activity_myact.php" name="activitychange"></iframe>		 			
+		 		</div>
+		 	</div>
+		 </div><!--end div activity-->
+		 
+		 <div id="present">
+		 	<div class="row">
+		 	<div class="col-xs-2 col-xs-offset-1">
+		 		<image class="roundpic" src="image/roundred" alt="pic1" width="10%" />
+		 		<span class="act_title">礼品</span>
+		 	</div>
+		 	</div>
+		 	<div class="row">
+
+		 		<div class="col-xs-2 sidenav">
+		 		    <div class="row">
+			 		<button class="btn-act"><a href="#">我的申请</a></button>
+			 		<button class="btn-sup"><a href="activity_create.php">礼品申请</a></button>
+			 		<button class="btn-pro"><a href="#">礼品反馈</a></button>
 			 		</div>
 		 		</div>
 		 		
-		 		<div class="col-xs-6">
-		 		
+		 		<div class="col-xs-9">
 			 			<div class="row">
 				 			<div class="col-xs-4">
-				 				<img src="" alt="" />
+				 				<img src="image/sample4.png" class="pic1" width="80%" alt="pic1" />
 				 			</div>
 				 			<div class="col-xs-8">
-				 				活动名称<br />
-				 				创建人<br />
-				 				礼品名称<br />
-				 				礼品状态<br />
+				 				礼品名称:<br />
+				 				申请人:<br />
+				 				礼品名称:<br />
+				 				礼品状态:<br />
 				 			</div>
 			 			</div>
 		 			
 		 				<div class="row">
 		 					<div class="col-xs-4">
-		 						<img src="" alt="" />
+		 						<img src="image/plus1.png" class="pic1" width="80%" alt="pic2" />
 		 					</div>
 		 					<div class="col-xs-8">
-		 						活动名称<br />
-		 						创建人<br />
-		 						礼品名称<br />
-		 						礼品状态<br />
+		 						礼品名称:<br />
+		 						申请人:<br />
+		 						礼品名称:<br />
+		 						礼品状态:<br />
 		 					</div>
 		 				</div>
-
 		 		</div>
 		 	</div>
-		
+		 </div><!--present-->
 		 	
-		 </div><!--end div acitivity-->
-		 
-		 <div id="present"></div><!--present-->
-		 
-		 <div id="club"></div><!--end div club-->
+		 <div id="club">
+		 	<div class="row">
+		 	<div class="col-xs-2 col-xs-offset-1">
+		 		<image class="roundpic" src="image/roundgrey" alt="pic1" width="10%" />
+		 		<span class="act_title">俱乐部</span>
+		 	</div>
+		 	</div>
+		 	<div class="row">
+
+		 		<div class="col-xs-2 sidenav">
+		 		    <div class="row">
+			 		<button class="btn-act"><a href="#">我的俱乐部</a></button>
+			 		</div>
+		 		</div>
+		 		
+		 		<div class="col-xs-9">
+			 			<div class="row">
+				 			<div class="col-xs-4">
+				 				<img src="image/sample4.png" class="pic1" width="80%" alt="pic1" />
+				 			</div>
+				 			<div class="col-xs-8">
+				 				俱乐部名称:<br />
+				 				地区:<br />
+				 				<br />
+				 				近期活动:<br />
+				 				1.xxxxxxxxxxxxx<br />
+				 				2.xxxxxxxxxxxxx<br />
+				 				3.xxxxxxxxxxxxx<br />
+				 			</div>
+			 			</div>
+		 			
+		 		</div>
+		 	</div>
+		 </div><!--end div club-->
 		 
 		 
 		 
 		 <div id="recent">
+
+
 		 	<div class="row">
-		 		<div class="col-xs-8">
+		 		<div class="col-xs-5">
+		 			<h4>近期活动消息</h4>
 		 			<div class="row">
-		 			<div class="col-xs-7"><img src="image/logo2.jpg" alt="rencentact" /></div>
-		 			<div class="col-xs-5"><img src="image/plus.jpg" alt="add" /></div>	
+		 			<div class="col-xs-7"><img src="image/sample3.png" width="100%" alt="rencentact" /></div>
+		 			<div class="col-xs-5"><img src="image/plus2.png" width="100%" alt="add" /></div>	
 		 			</div>
 		 			
 		 			<div class="row">
@@ -128,27 +203,36 @@ require_once('sessionstart.php');
 		 			<div class="col-xs-5">创建活动</div>
 		 			</div>
 		 		</div> 
-		 		<a href="#">
-		 		<div class="col-xs-3 note-transform">
-		 		     
-		 		      <h4>公告标题</h4>
-		 		      <small>2015.4.3</small>
-		 		      <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		 		      <p class="note-transform-p">详情→</p>
-		 		    </div>
-		 		    </a>
-		 		    
-		 		    
-		 		 <a href="#">
-		 		<div class="col-xs-3 note-transform">
-		 		      <h4>公告标题</h4>
-		 		      <small>2015.4.3</small>
-		 		      <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		 		      <p class="note-transform-p">详情→</p>
-		 		 </div>
-		 		 </a>
-		 
-		 		    </div><!--end div row-->
+
+		 		<div class="col-xs-5 col-xs-offset-1">
+		 		
+		 		
+		 			<small class="pull-right">更多</small>
+		 			<h4>公告</h4>
+		 		
+
+		 		<div class="row">
+			 		<a href="#">
+			 		<div class="col-xs-5 note-transform">
+			 		      <h5>公告标题</h5>
+			 		      <small>2015.4.3</small>
+			 		      <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			 		      <p class="note-transform-p">详情→</p>
+			 		 </div>
+			 		 </a>
+			 		 <a href="#">
+			 		<div class="col-xs-5 col-xs-offset-1 note-transform">
+			 		      <h5>公告标题</h5>
+			 		      <small>2015.4.3</small>
+			 		      <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			 		      <p class="note-transform-p">详情→</p>
+			 		 </div>
+			 		 </a>
+			 	</div>
+
+		 		</div><!--end div col-xs-5 col-xs-offset-1-->
+
+		 		 </div><!--end div row-->
 		 </div><!--end div recnet-->
 	  </div><!--end div container-fulid-->
 	 

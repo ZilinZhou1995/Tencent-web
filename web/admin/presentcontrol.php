@@ -1,6 +1,5 @@
 <?php 
-   define('GW_UPLOADPATH', 'upload/');
-  define('GW_MAXFILESIZE', 32768);
+    require_once('appvars.php');  
     $mysql_servername = "127.0.0.1:3306"; //主机地址
     $mysql_username = "root"; //数据库用户名
     $mysql_password ="root"; //数据库密码
@@ -16,11 +15,12 @@
       echo '<table class="table table-striped">';
         echo  '<thead>';
           echo  '<tr>';
-             echo'<th>活动号</th>';
-             echo'<th>活动名称</th>';
-             echo'<th>活动日期</th>';
-             echo'<th>活动创建人</th>';
-             echo'<th>活动描述</th>';
+             echo'<th>礼品号</th>';
+             echo'<th>礼品名称</th>';
+             echo'<th>礼品日期</th>';
+             echo'<th>礼品申请创建人</th>';
+             echo'<th>礼品种类</th>';
+             echo'<th>礼品数量</th>';
              echo'<th>审核<th>';
              echo '</tr>';
              echo '</thead>';

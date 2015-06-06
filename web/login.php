@@ -12,8 +12,8 @@ $_SESSION['password']=$password;
 
 if ($name && $passowrd){
  $sql = "SELECT * FROM users WHERE account = '$name' and password=sha1('$passowrd')";
- $res = mysql_query($sql);
- $rows=mysql_num_rows($res);
+ $res = mysqli_query($dbc,$sql);
+ $rows=mysqli_num_rows($res);
   if($rows){
    header("refresh:0;url=myinfo.php");//跳转页面，注意路径
    exit;

@@ -235,7 +235,7 @@
                       <li><a href="#">腾讯官方网站</a></li>
                         <li><a href="#">Github项目网址</a></li>
                         <li><a href="#">腾讯先锋队官方网站</a></li>
-                        <li><a href="#">其他</a></li>
+                        <li><a href="/admin/adminlogin.html">先锋队管理后台登录</a></li>
                     </ul>
                 </div><!--end col-sm-2-->
                 

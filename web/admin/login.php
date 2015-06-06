@@ -12,10 +12,11 @@ $_SESSION['password']=$password;
 
 if ($name && $passowrd){
  $sql = "SELECT * FROM userstwo WHERE name = '$name' and password='$passowrd'";
- $res = mysql_query($sql);
- $rows=mysql_num_rows($res);
+ $res = mysqli_query($dbc,$sql);
+ $rows=mysqli_num_rows($res);
   if($rows){
    header("refresh:0;url=dashboard.php");//跳转页面，注意路径
+   mysqli_close($dbc);
    exit;
  }
  echo "<script language=javascript>alert('用户名密码错误');history.back();</script>";
