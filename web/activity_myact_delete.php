@@ -15,6 +15,6 @@
 	}
 	else
 	{
-		header("refresh:0;url=index.php");//跳转页面，注意路径
+		header("refresh:0;url=index.php");//跳转页面，注意路径hahahha
 	}
  ?>
