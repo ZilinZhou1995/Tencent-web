@@ -36,7 +36,7 @@
   		require_once('appvars.php');
 
   		if (isset($_POST['submit'])) {		
-  			$name = $_POST['name'];
+  			$actname = $_POST['actname'];
   			$date = $_POST['date'];
   			$club = $_POST['club'];
   			$description = $_POST['description'];
@@ -44,7 +44,7 @@
   			$picture_type = $_FILES['picture']['type'];
   			$picture_size = $_FILES['picture']['size'];
 
-  			if (!empty($name) && !empty($date) && !empty($club) && !empty($picture)) {
+  			if (!empty($actname) && !empty($date) && !empty($club) && !empty($picture)) {
   				if ((($picture_type == 'image/gif') || ($picture_type == 'image/jpeg') || ($picture_type == 'image/pjepg') || ($picture_type== 'image/png'))
   					&& ($picture_size > 0) && ($picture_size <= 32768000)) {
   					if ($_FILES['picture']['error'] == 0) {
@@ -57,23 +57,24 @@
 									$id = $row['maxId'] + 1;
 								}								
 
-  							$query = "insert into activity(actid,actname,actdate,actclub,actdes,actpic,approved) values ('$id','$name','$date','$club','$description','$picture',0)";
-  								mysqli_query($dbc,$query);
+  							$query = "insert into activity(actid,actname,actdate,actclub,actdes,actpic,approved,actreport) values ('$id','$actname','$date','$club','$description','$picture',0,0)";	
+                  mysqli_query($dbc,$query);
 
   							  	echo '<p>Thanks for adding your new high score! It will be reviewed and added to the high score list as soon as possible.</p>';
-					            echo '<p><strong>Name:</strong> ' . $name . '<br />';
+					            echo '<p><strong>Name:</strong> ' . $actname . '<br />';
 					            echo '<strong>Date:</strong> ' . $date . '<br />';
 					            echo '<img src="' . GW_UPLOADPATH . $picture . '" alt="image" width="50px"/></p>';
 					            echo '<p><a href="activity_myact.php">&lt;&lt; Back to index</a></p>';
 
 					            // Clear the score data to clear the form
-					            $name = "";
+					            $actname = "";
 					            $club = "";
 					            $date = "";
 					            $description = "";
 					            $picture = "";
 
            					 mysqli_close($dbc);
+                    // header("refresh:0;url=activity_myact.php");
   						}
   						else{
   							echo '<p class="error">Sorry, there was a problem uploading your screen shot image.</p>';
@@ -98,8 +99,8 @@
   		
   		<div class="form-group">
   			<label for="inputName">活动名称</label>
-  			<input type="text" name="name" class="form-control" id="inputActName" placeholder="输入活动名称" value="<?php if (!empty($name)) {
-  				echo $name;
+  			<input type="text" name="actname" class="form-control" id="inputActName" placeholder="输入活动名称" value="<?php if (!empty($actname)) {
+  				echo $actname;
   			}; ?>">
   		</div>
   		<div class="form-group">

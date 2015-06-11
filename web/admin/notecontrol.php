@@ -1,5 +1,4 @@
-<html lang="zh-CN"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,50 +29,47 @@
 
   <body>
       <div class="row placeholders">
-            <a href="activitycontrol.php"target="show"><div class="col-xs-6 col-sm-3 placeholder">
+            <a href="notecontrol.php"target="show"><div class="col-xs-6 col-sm-3 placeholder">
               <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="200x200"
                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBEOEZEQiIvPjxnPjx0ZXh0IHg9Ijc0LjA0Njg3NSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojRkZGRkZGO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true">
-              <h4>活动申请</h4>
-              <span class="text-muted">活动申请总汇</span>
+              <h4>公告总览</h4>
+              <span class="text-muted">浏览所有的公告</span>
             </div></a>
-            <a href="activityreport.php" target="show"><div class="col-xs-6 col-sm-3 placeholder">
+            <a href="note_create.php" target="show"><div class="col-xs-6 col-sm-3 placeholder">
               <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="200x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzM5REJBQyIvPjxnPjx0ZXh0IHg9Ijc0LjA0Njg3NSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojMUUyOTJDO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true">
-              <h4>活动反馈</h4>
-              <span class="text-muted">活动反馈总汇</span>
+              <h4>公告创建</h4>
+              <span class="text-muted">创建一个公告</span>
             </div></a>
             <div class="col-xs-6 col-sm-3 placeholder">
               <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="200x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBEOEZEQiIvPjxnPjx0ZXh0IHg9Ijc0LjA0Njg3NSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojRkZGRkZGO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true">
-              <h4>进行的活动</h4>
-              <span class="text-muted">正在进行的活动</span>
+              <h4>公告编辑</h4>
+              <span class="text-muted">编辑一个公告</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
               <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="200x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzM5REJBQyIvPjxnPjx0ZXh0IHg9Ijc0LjA0Njg3NSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojMUUyOTJDO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true">
-              <h4>结束的活动</h4>
-              <span class="text-muted">已经结束的活动</span>
+              <h4>其他功能</h4>
+              <span class="text-muted">正在建设中</span>
             </div>
           </div>
 
-          <h2 class="sub-header">活动信息控制</h2>
+          <h2 class="sub-header">公告信息控制</h2>
 <?php 
    
     require_once('appvars.php');
     require_once('conn.php');
-    $query = "SELECT * FROM activity";
-    $data  = mysqli_query($dbc, $query);
-
-
-    
-    echo '<div class="table-responsive">';
+    $query = "SELECT * FROM note";
+    if ($data  = mysqli_query($dbc, $query)) {
+      echo '<div class="table-responsive">';
       echo '<table class="table table-striped">';
         echo  '<thead>';
           echo  '<tr>';
-             echo'<th>活动号</th>';
-             echo'<th>活动名称</th>';
-             echo'<th>活动日期</th>';
-             echo'<th>活动创建人</th>';
-             echo'<th>活动描述</th>';
-             echo'<th>审核</th>';
-             echo'<th>报告</th>';
+             echo'<th>公告号</th>';
+             echo'<th>公告标题</th>';
+             echo'<th>公告日期</th>';
+             echo'<th>公告创建人</th>';
+             echo'<th>公告内容</th>';
+             echo'<th>是否删除</th>';
+             echo'<th>是否首页</th>';
              echo '</tr>';
              echo '</thead>';
              echo '<tbody>';
@@ -81,26 +77,17 @@
              while ($row = mysqli_fetch_array($data)) {
                
                 echo '<tr>';
-                  echo '<td>'.$row['actid'].'</td>';
-                  echo '<td>'.$row['actname'].'</td>';
-                  echo '<td>'.$row['actdate'].'</td>';
-                  echo '<td>'.$row['actclub'].'</td>';
-                  echo '<td>'.$row['actdes'].'</td>';
-                  if (($row['actreport'] == 0) && ($row['approved'] == 0)) {
-                    echo '<td>不可提交</td>';
+                  echo '<td>'.$row['noteid'].'</td>';
+                  echo '<td>'.$row['noteheader'].'</td>';
+                  echo '<td>'.$row['notedate'].'</td>';
+                  echo '<td>'.$row['notecreater'].'</td>';
+                  echo '<td>'.$row['notecontent'].'</td>';
+                  echo '<td><a href="note_delete.php?noteid='. $row['noteid'] . '">删除</a></td>';
+                  if ($row['noteindex'] == 0) {
+                    echo '<td><a href="note_submitindex.php?noteid=' . $row['noteid'] . '&amp;noteindex=' . $row['noteindex'] . '&amp;noteheader=' . $row['noteheader'] . '&amp;notedate=' . $row['notedate'] .'&amp;notecreater=' . $row['notecreater'] . '&amp;notecontent=' . $row['notecontent'] . '">未首页</a></td>';
                   }
-                  elseif (($row['approved'] == 1) || ($row['approved'] == 1)) {
-                    echo '<td>可提交</td>';
-                  }
-                  elseif ($row['actreport'] == 2) {
-                    echo '<td>已提交</td>';
-                  }
-
-                  if ($row['approved'] == 0) {
-                    echo '<td><a href="activity_approved.php?actid=' . $row['actid'] . '&amp;actname=' . $row['actname'] . '&amp;actdate=' . $row['actdate'] .'&amp;actclub=' . $row['actclub'] . '&amp;actdes=' . $row['actdes'] . '">等待审核通过</a></td>';
-                  }
-                  else if($row['approved'] == 1){
-                    echo '<td>审核通过</td>';
+                  else if($row['noteindex'] == 1){
+                    echo '<td><a href="note_submitindex.php?noteid=' . $row['noteid'] . '&amp;noteindex=' . $row['noteindex'] . '&amp;noteheader=' . $row['noteheader'] . '&amp;notedate=' . $row['notedate'] .'&amp;notecreater=' . $row['notecreater'] . '&amp;notecontent=' . $row['notecontent'] . '">已首页</a></td>';
                   }
 
                  
@@ -113,6 +100,30 @@
             echo'</table>';
       echo'</div>';
       mysqli_close($dbc);
+    }
+    else
+    {
+            echo '<div class="table-responsive">';
+      echo '<table class="table table-striped">';
+        echo  '<thead>';
+          echo  '<tr>';
+             echo'<th>公告号</th>';
+             echo'<th>公告标题</th>';
+             echo'<th>公告日期</th>';
+             echo'<th>公告创建人</th>';
+             echo'<th>公告内容</th>';
+             echo'<th><a href="note_delete.php?noteid=' . $row['noteid'] . '">是否删除</a></th>';
+             echo'<th>是否首页</th>';
+             echo '</tr>';
+             echo '</thead>';
+             echo '<tbody>';
+           
+              echo'</tbody>';
+            echo'</table>'; 
+            echo '暂无公告，赶快创建一个吧';
+      echo'</div>';
+      mysqli_close($dbc);
+    }
 ?>
 </body>
   <script src="./Dashboard Template for Bootstrap_files/jquery.min.js"></script>

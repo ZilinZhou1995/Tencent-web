@@ -22,7 +22,6 @@ require_once('sessionstart.php');
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -70,7 +69,7 @@ require_once('sessionstart.php');
 		 							echo '<input type="hidden" name="club" value="' . $person['club'] . '">';
 		 							echo '<input type="hidden" name="school" value="' . $person['school'] . '">';
 		 							echo '<div id="modify"><a href="myinfo_personmodify.php" target="personinfo"><input type="submit" value="修改"></a></div>';
-		 							echo '<iframe height="50%" frameborder="0" src="myinfo_personinfo.php" name="personinfo"></iframe>';
+		 							echo '<iframe height="40%" frameborder="0" src="myinfo_personinfo.php" name="personinfo"></iframe>';
 		 						}	
 		 						echo '</form>';
 		 						echo '</div>';
@@ -100,7 +99,7 @@ require_once('sessionstart.php');
 			 		</div>
 		 		</div>		 		
 		 		<div class="col-xs-9">
-		 			<iframe height="80%" width="100%" scrolling="no" frameborder="0" src="activity_myact.php" name="activitychange"></iframe>		 			
+		 			<iframe height="90%" width="100%" scrolling="no" frameborder="0" src="activity_myact.php" name="activitychange"></iframe>		 			
 		 		</div>
 		 	</div>
 		 </div><!--end div activity-->
@@ -205,11 +204,8 @@ require_once('sessionstart.php');
 		 		</div> 
 
 		 		<div class="col-xs-5 col-xs-offset-1">
-		 		
-		 		
 		 			<small class="pull-right">更多</small>
 		 			<h4>公告</h4>
-		 		
 
 		 		<div class="row">
 			 		<a href="#">

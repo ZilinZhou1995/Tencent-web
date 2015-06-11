@@ -50,7 +50,7 @@ a:hover{
 	width:80px;
 	border-radius:8px;
 }
-#navright button{
+#navright a{
 
 	-webkit-transition-property:color;
 	-webkit-transition-duration:.7s;
@@ -59,7 +59,7 @@ a:hover{
 }
 
 
-#navright button:hover{
+#navright a:hover{
 	color:#DC4345;
 	
 	

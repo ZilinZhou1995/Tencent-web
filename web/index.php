@@ -28,7 +28,10 @@
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+
+
+
+    </head>
 
   <body>
 
@@ -37,12 +40,12 @@
    
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-  
-    <div class="jumbotron" id="jumbot">
+    <div class="jumbotron content-resizer" id="jumbot" data-target="jumbot">
     	<div id="jumcontent">
     	<h3>腾讯先锋队</h3>
         <p class="content-normal">先锋，是一种姿态拒绝平庸不明距离先锋是一泓阿萨德咖啡机撒旦立刻叫阿爽好噶设立科技噶双打冠军阿萨德撒旦了卡速度哈快来嘎说活着就是为了改变世界</p>
-    	</div><!--end div jum content-->
+
+      </div><!--end div jum content-->
         <div id="jumbutton">
         <?php 
         	if (isset($_SESSION['name'])) {
@@ -65,153 +68,151 @@
         </div><!--end div jumbutton-->
     </div>
 		
-  <div class="container-fluid center-block"" id="show" >
+  <div class="container-fluid center-block content-resizer" id="show" data-target="show">
     
-  <div class="container  id="show-content">
-  <div class="note-margin">
-  <h2 class="jum-header-color text-none">展示 <small class="pull-right">更多</small></h2>
-  </div>
-	<br>
-    <div class="row info-show-div" >
-      <div class="col-md-6">
-         <div class="col-sm-12 background1" >
-			<a href="#"><div class="transbox">
-				<p>
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-				</p>
-			</div></a>
-		</div>
-          <div class="col-sm-12">
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-          </div>
-      </div>
-       <div class="col-md-6">
-        <div class="col-sm-12 background2" >
-			<a href="#"><div class="transbox">
-				<p>
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-				</p>
-			</div></a>
-		</div>
-            <br>
-          <div class="col-sm-12">
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-          </div>
-      </div>
+    <div class="container"  id="show-content">
+    <div class="note-margin">
+    <h2 class="jum-header-color text-none">展示 <small class="pull-right">更多</small></h2>
     </div>
-    <br>
-     <div class="row">
-      <div class="col-md-6">
-       <div class="col-sm-12 background3" >
-			<a href="#"><div class="transbox">
-				<p>
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-				</p>
-			</div></a>
-		</div>
-          <div class="col-sm-12">
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-          </div>
+  	<br>
+      <div class="row info-show-div" >
+        <div class="col-md-6">
+           <div class="col-sm-12 background1" >
+  			<a href="#"><div class="transbox">
+  				<p>
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+  				</p>
+  			</div></a>
+  		</div>
+            <div class="col-sm-12">
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </div>
+        </div>
+         <div class="col-md-6">
+          <div class="col-sm-12 background2" >
+  			<a href="#"><div class="transbox">
+  				<p>
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+  				</p>
+  			</div></a>
+  		</div>
+              <br>
+            <div class="col-sm-12">
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </div>
+        </div>
       </div>
-       <div class="col-md-6">
-         <div class="col-sm-12 background4" >
-			<a href="#"><div class="transbox">
-				<p>
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-                    This is some text that is placed in the transparent box.
-				</p>
-			</div></a>
-		</div>
-          <div class="col-sm-12">
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-          </div>
-      </div>
-    </div>    
-  </div>
+      <br>
+       <div class="row">
+        <div class="col-md-6">
+         <div class="col-sm-12 background3" >
+  			<a href="#"><div class="transbox">
+  				<p>
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+  				</p>
+  			</div></a>
+  		</div>
+            <div class="col-sm-12">
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </div>
+        </div>
+         <div class="col-md-6">
+           <div class="col-sm-12 background4" >
+  			<a href="#"><div class="transbox">
+  				<p>
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+                      This is some text that is placed in the transparent box.
+  				</p>
+  			</div></a>
+  		</div>
+            <div class="col-sm-12">
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </div>
+        </div>
+      </div>    
+    </div>
 </div>
     
     
     
     <br>
-    <div class="container-fluid set-bg" id="note">
-  	<div class="container">
-        <h2 class="jum-header-color note-padding">公告<small class="pull-right jum-header-color">更多</small></h2>
-    
- 	
-      <div class="row ">
-        <a href="#">
-        <div class="col-lg-3 note-transform">
-         
-          <h4>公告标题</h4>
-          <small>2015.4.3</small>
-          <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p class="note-transform-p">详情→</p>
-        </div>
-        </a>
-         
-        <a href="#">
-        <div class="col-lg-3 note-transform" >
-          <h4>公告标题</h4>
-          <small>2015.4.3</small>
-          <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p class="note-transform-p">详情→</p>
-          
-          <br>
-        </div>
-        </a>
-        <a href="#">
-	<div class="col-lg-3 note-transform">
-          <h4>公告标题</h4>
-          <small>2015.4.3</small>
-          <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p class="note-transform-p">详情→</p>
-          
-          
-        </div>
-        </a>
-        <a href="#">
-	<div class="col-lg-3 note-transform">
-          <h4>公告标题</h4>
-          <small>2015.4.3</small>
-          <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p class="note-transform-p">详情→</p>
-          
-          
-        </div>
-        </a>
-      </div><!--end div container-->
+    <div class="container-fluid set-bg content-resizer" id="note" data-target="noteshow">
+    	<div class="container">
+          <h2 class="jum-header-color note-padding">公告<small class="pull-right jum-header-color">更多</small></h2>
+      
+   	
+        <div class="row ">
+        <?php 
+            require_once('conn.php');
+             
+              $querynote = "SELECT * FROM note WHERE noteindex = 1";
+            
+              $datanote  = mysqli_query($dbc,$querynote);
+              $count = 0;
+              while($rownote = mysqli_fetch_array($datanote)) { 
+                if ($count < 4) {
+                echo '<a href="#">';
+                echo '<div class="col-lg-3 note-transform">';
+                echo '<h4>' . $rownote['noteheader'] . '</h4>';
+                echo '<small>' . $rownote['notedate'] . '</small>';
+                echo '<p class="note-margin">' . $rownote['notecontent'] . '</p>';
+                echo '<p class="note-transform-p">详情→</p>';
+                echo '</div>';
+                echo '</a>';
+                $count++;
+                }
 
-        
-      </div>
-      	<div class="row text-center">
-            <div class="col-lg-4" id="activity">
-            活动
-            <p class="project-content">活动的申请与反馈
-            </div>
-            <div class="col-lg-4" id="print">
-            礼品
-            <p class="project-content">礼品的申请和使用反馈</p>
-            </div>
-            <div class="col-lg-4" id="grade">
-            物料
-            <P class="project-content">活动的完成情况</P>
-            </div>
-     </div>
+              }
+              
+              while ($count < 4) {
+                echo '<a href="#">';
+                echo '<div class="col-lg-3 note-transform" >';
+                  echo '<h4>公告标题</h4>';
+                  echo '<small>2015.4.3</small>';
+                  echo '<p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>';
+                  echo '<p class="note-transform-p">详情→</p>';
+                  
+                  echo '<br>
+                </div>
+                </a>';
+                $count++;
+              }
+
+          
+         ?>
+          </div><!--end div container-->
+
+            
+          </div>
+          	<div class="row text-center" data-target="blocks">
+                <a href="activityall.php"><div class="col-lg-4" id="activity">
+                活动
+                <p class="project-content">活动的申请与反馈</p>
+                </div></a>
+                <a href="presentall.php"><div class="col-lg-4" id="print">
+                礼品
+                <p class="project-content">礼品的申请和使用反馈</p>
+                </div></a>
+                <a href="assessall.php"><div class="col-lg-4" id="grade">
+                绩效
+                <p class="project-content">活动的完成情况</p>
+                </div></a>
+         </div>
    </div> <!-- /container -->
    
    
@@ -235,7 +236,7 @@
                       <li><a href="#">腾讯官方网站</a></li>
                         <li><a href="#">Github项目网址</a></li>
                         <li><a href="#">腾讯先锋队官方网站</a></li>
-                        <li><a href="/admin/adminlogin.html">先锋队管理后台登录</a></li>
+                        <li><a href="admin/adminlogin.html">先锋队管理后台登录</a></li>
                     </ul>
                 </div><!--end col-sm-2-->
                 
@@ -260,7 +261,6 @@
         </div><!--end container-->
         
       </footer>
-
   
 
     <!-- Bootstrap core JavaScript

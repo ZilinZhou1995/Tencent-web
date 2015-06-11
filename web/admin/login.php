@@ -11,7 +11,7 @@ $_SESSION['password']=$password;
 
 
 if ($name && $passowrd){
- $sql = "SELECT * FROM userstwo WHERE name = '$name' and password='$passowrd'";
+ $sql = "SELECT * FROM admin WHERE account = '$name' and password='$passowrd'";
  $res = mysqli_query($dbc,$sql);
  $rows=mysqli_num_rows($res);
   if($rows){

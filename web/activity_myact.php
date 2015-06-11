@@ -23,7 +23,7 @@ require_once('sessionstart.php');
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
+    <script type="text/javascript" src="js/activity_myact.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -43,9 +43,10 @@ require_once('sessionstart.php');
 		$activityQuery = "SELECT * FROM activity WHERE actclub = '$myclub'";
 		$activityData = mysqli_query($dbc,$activityQuery);
 		$activityCount = 0;
+		//echo '<div id="show">';
 		while (($activityRow = mysqli_fetch_array($activityData)) && ($activityCount <= 1)) {
-			echo '<div class="row">';
-			echo '<div class="col-xs-4">';
+			echo '<a href="activitydetail.php" id ="jump"><div class="row">';
+			echo '<div class="col-xs-4 show" id="showi">';
 				$actpic = $activityRow['actpic'];
 				
 				echo '<img src="' . GW_UPLOADPATH . $actpic . '" class="pic1" width="80%" alt="pic1" />';
@@ -55,26 +56,43 @@ require_once('sessionstart.php');
 				echo '<input name="actid" type="hidden" value="' . $activityRow['actid'] . '">';
 				echo '<button type="submit" value="删除" class="delete" href="activity_myact_delete.php">删除</button>';
 				echo '</form>';
+				echo '<div class="show">';
 				echo '活动名称:' . $activityRow['actname'] . '<br />';
 				echo '创建人:' . $activityRow['actclub'] . '<br />';
 				echo '活动描述:' . $activityRow['actdes'] . '<br />';
+				
 				if ($activityRow['approved'] == 0) {
 					echo '活动状态: 审核中<br />';
 				}
 				elseif ($activityRow['approved'] == 1) {
 					echo '活动状态:审核通过<br />';
 				}
+				if ($activityRow['actreport'] == 0) {
+					echo '活动反馈：不可提交反馈';
+				}
+				elseif ($activityRow['actreport'] == 1) {
+					echo '活动反馈：可以提交反馈';
+				}
+				elseif ($activityRow['actreport'] == 2) {
+					echo '活动反馈：已提交反馈';
+				}
+				echo '</div>';
 			echo '</div>';
-			echo '</div>';
+			echo '</div></a>';
 		$activityCount++;
 		}
+		//echo '</div>';
 		if (!($activityRow = mysqli_fetch_array($activityData))) {
 			echo '<div class="row">';
 			echo '<div class="col-xs-4">';
 				echo '<a href = "activity_create.php"><image src = "image/plus1" alt="pic1" width="80%" class="pic1" /></a>';
 			echo '</div>';
 			echo '<div class="col-xs-8">';
-				echo '还没有新的活动正在进行中，赶快创建一个吧';
+			if ($activityCount > 0) {
+				echo "创建一个活动吧";
+			}
+			else
+				{echo '还没有新的活动正在进行中，赶快创建一个吧';}
 			echo '</div>';
 			echo '</div>';
 		}

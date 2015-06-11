@@ -1,0 +1,31 @@
+/*-------------------------------
+	Footer
+________________________________*/
+
+footer{
+	background-color:#f9f9f9;
+	color:#6c6d70;
+	font-size:8px;
+	padding:20px;
+}
+
+#footer-contact{
+	color:989898;
+}
+
+footer img{
+	opacity:0.3;
+	margin-top:30px;
+	margin-right:20px;
+}
+
+
+/************************/
+
+body{
+	font-family:"Hiragino Sans GB W6","Hiragino Sans GB W3";
+}
+
+a:hover{
+	text-decoration:none;
+}

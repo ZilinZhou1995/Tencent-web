@@ -34,7 +34,7 @@
 			if ($_POST['confirm'] == 'Yes') {
 				require_once('conn.php');
 
-  				$query = "UPDATE activity SET approved = 1 WHERE actid = $id";
+  				$query = "UPDATE activity SET approved = 1,actreport = 1 WHERE actid = $id";
   				mysqli_query($dbc,$query);
   				mysqli_close($dbc);
 
@@ -56,7 +56,8 @@
 		//	echo '<input type = "hidden name = "pic" value="' . $pic . '"/>';
 			echo '</form>';
 		}
-		echo '<p><a href = "dashboard.php">&lt;&lt; Back to Dashboard page</a></p>';
+		echo '<p><a href = "activitycontrol.php">&lt;&lt; Back to Dashboard page</a></p>';
+		//header("refresh:0;url =activitycontrol.php");
 	 ?>
 
 

@@ -3,7 +3,8 @@ body{
 }
 
 a:hover{
-	text-decoration:none;
+	text-decoration:none!important;
+	color: #7ddad3;
 }
 /*nav***************************/
 #navbarone {
@@ -50,17 +51,16 @@ a:hover{
 	width:80px;
 	border-radius:8px;
 }
-#navright button{
-
+a{
+	color:333;
 	-webkit-transition-property:color;
 	-webkit-transition-duration:.7s;
 	-webkit-transition-timing-function:ease-out;
-		text-decoration:none;
+	text-decoration:none;
 }
 
 
-#navright button:hover{
+#navright a:hover{
 	color:#DC4345;
-	
 	
 }

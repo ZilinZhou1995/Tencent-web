@@ -1,4 +1,5 @@
 <?php require_once('sessionstart.php') ?> 
+
 <nav class="navbar navbar-fixed-top" id="navbarone">
       <div class="container">
 
@@ -25,15 +26,25 @@
           <div class="navbar-right" id="navright">
           
             
-            <button type="button" class="btn btn-link">首页</button>
-            <button type="button" class="btn btn-link">公告</button>
-            <button type="button" class="btn btn-link">物料</button>
-            <button type="button" class="btn btn-link">礼品</button>
-            <button type="button" class="btn btn-link">绩效</button>
-            <button type="button" class="btn btn-link" id="navright-show">展示</button>
+            <a type="button" class="btn btn-link" href="index.php">首页</a>
+            <a type="button" class="btn btn-link" href="note.php">公告</a>
+            <a type="button" class="btn btn-link" href="supplies.php">物料</a>
+            <a type="button" class="btn btn-link" href="present.php">礼品</a>
+            <a type="button" class="btn btn-link" >绩效</a>
+            <a type="button" class="btn btn-link" id="navright-show" href="personshow.php">展示</a>
+           
             <?php 
             if (isset($_SESSION['name'])) {
-            	echo 'Welcome!'.$_SESSION['name'];
+            	
+              $account = $_SESSION['name'];
+              require_once('conn.php');
+              require_once('appvars.php');
+              $queryimg = "SELECT * FROM users WHERE account = '$account'";
+              $dataimg = mysqli_query($dbc,$queryimg);
+              if ($rowimg = mysqli_fetch_array($dataimg)) {
+                echo  '<img src="' . GW_UPLOADPATH . $rowimg['infopic'] . '" height="30px" width="30px" class="img-circle" >';
+              }
+              echo 'Welcome!<a href="myinfo.php">'.$_SESSION['name'] . '</a>';
             ?>
            	
            <a href="logout.php">注销</a>
