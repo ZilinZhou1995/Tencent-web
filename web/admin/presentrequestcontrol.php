@@ -68,8 +68,8 @@
         echo  '<thead>';
           echo  '<tr>';
              echo'<th>礼品申请号</th>';
-             echo'<th>对应礼品ID</th>';
-             echo'<th>对应活动ID</th>';
+             echo'<th>对应礼品</th>';
+             echo'<th>对应活动</th>';
              echo'<th>数量</th>';
              echo'<th>申请日期</th>';
              echo'<th>申请人</th>';
@@ -82,11 +82,25 @@
              $i = 0;
              while ($row = mysqli_fetch_array($data)) {
 
+                $presentid = $row['presentid'];
+                $actid = $row['actid'];
+                $queryactivity = "SELECT * FROM activity WHERE actid = $actid"; 
+                $dataactivity = mysqli_query($dbc,$queryactivity);
+                if ($rowactivity = mysqli_fetch_array($dataactivity)) {
+                         $actname = $rowactivity['actname'];
+                       }   
+                $querypresent = "SELECT * FROM present WHERE presentid = $presentid"; 
+                $datapresent = mysqli_query($dbc,$querypresent);
+                if ($rowpresent = mysqli_fetch_array($datapresent)) {
+                         $presentname = $rowpresent['presentname'];
+                       }       
+    
+
                 echo '<tr>';
                   echo '<td>'.$row['presentrequestid'].'</td>';
-                  echo '<td>'.$row['presentid'].'</td>';
-                  echo '<td>'.$row['actid'].'</td>';
-                  echo '<td>'.$row['presentrequestamount'].'</td>';
+                  echo '<td>'.$rowpresent['presentname'].'</td>';
+                  echo '<td>'.$rowactivity['actname'].'</td>';
+                  echo '<td>'.$row['amount'].'</td>';
                   echo '<td>'.$row['presentrequestdate'].'</td>';
                   echo '<td>'.$row['presentrequestcreater'].'</td>';
                   echo '<td>'.$row['presentrequestreason'].'</td>';
@@ -100,9 +114,8 @@
                   elseif ($row['presentrequestreport'] == 2) {
                     echo '<td>已提交</td>';
                   }
-
                   if ($row['approved'] == 0) {
-                    echo '<td><a href="presentrequest_approved.php?presentrequestid=' . $row['presentrequestid'] . '&amp;presentid=' . $row['presentid'] . '&amp;actid=' . $row['actid'] .'&amp;presentrequestcreater=' . $row['presentrequestcreater'] . '&amp;presentrequestreason=' . $row['presentrequestreason'] . '&amp;presentrequestamount=' . $row['presentrequestamount'] . '">等待审核通过</a></td>';
+                    echo '<td><a href="presentrequest_approved.php?presentrequestid=' . $row['presentrequestid'] . '&amp;presentid=' . $row['presentid'] . '&amp;actid=' . $row['actid'] .'&amp;presentrequestcreater=' . $row['presentrequestcreater'] . '&amp;presentrequestdate=' . $row['presentrequestdate'] . '&amp;presentrequestreason=' . $row['presentrequestreason'] . '&amp;amount=' . $row['amount'] . '">等待审核通过</a></td>';
                   }
                   else if($row['approved'] == 1){
                     echo '<td>审核通过</td>';

@@ -10,7 +10,7 @@
     <meta name="author" content="Ms.Brave" >
     <link rel="icon" href="../../favicon.ico">
 
-    <title>物料</title>
+    <title>活动</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,10 +18,21 @@
     <!-- Custom styles for this template -->
     <link href="css/activitydetail.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!-- Just for debugging purposes. Don't presentually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
+    <script type="text/javascript">
+  /*  var showOrHide = function(){
+        var divContent = document.getElementById(divContent);
+        if (divContent.style.display='none') {
+            divContent.style.display = 'block';
+        };
+        else{
+            divContent.style.display = 'none';
+        }
+    }*/
+    </script>
+    <script type="text/javascript" src="js/activityall.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,80 +42,95 @@
 
 <body>
 
-	<!--************************** nav here ***********************-->
-	
-	 <?php 
-	 	require_once('navbar.php');
-	 ?>	 
-	 
+    <!--************************** nav here ***********************-->
+    
+     <?php 
+        require_once('navbar.php');
+     ?>  
+     
     <div class="header">
-			<h1>活动</h1>
-    		<div class="row sidenav nav-button">
-    				
-    				<button class="btn-act nav-button"><a href="#">活动</a></button>
-    				<button class="btn-sup nav-button"><a href="#">礼品</a></button>
-    				<button class="btn-pro nav-button"><a href="#">绩效</a></button>
-    		</div>
+            <h1>礼品</h1>
+            <div class="row sidenav nav-button">
+                    <button class="btn-act nav-button"><a href="activityall.php">活动</a></button>
+                    <button class="btn-sup nav-button"><a href="presentall.php">礼品</a></button>
+                    <button class="btn-pro nav-button"><a href="assessall.php">绩效</a></button>
+            </div>
     </div>
+
     
     <div class="content container" >
     <?php 
     require_once('appvars.php');
     require_once('conn.php');
     $name = $_SESSION['name'];
-    $queryPersonalInfo = "SELECT * FROM users WHERE account = '$name'";      
-    $personaldata = mysqli_query($dbc,$queryPersonalInfo);
-    if ($person = mysqli_fetch_array($personaldata)) {
-        $myclub = $person['club'];
-        $activityQuery = "SELECT * FROM activity WHERE actclub = '$myclub'";
-        $activityData = mysqli_query($dbc,$activityQuery);
-        $activityCount = 0;
-        while (($activityRow = mysqli_fetch_array($activityData)) && ($activityCount <= 1)) {
-            echo '<div class="row">';
-            echo '<div class="col-xs-7">';
-                $actpic = $activityRow['actpic'];
-                
-                echo '<img src="' . GW_UPLOADPATH . $actpic . '"width="510" height="350" class="pic1" alt="pic1" />';
-            echo '</div>';
-            echo '<div class="col-xs-4">';
-                echo '<form method="get" action="activity_myact_delete.php">';
-                echo '<input name="actid" type="hidden" value="' . $activityRow['actid'] . '">';
-              //  echo '<button type="" value="删除" class="delete" href="activity_myact_delete.php">删除</button>';
-                echo '</form>';
-                echo '<p>活动名称:' . $activityRow['actname'] . '</p>';
-                echo '<p>创建人:' . $activityRow['actclub'] . '</p>';
-                echo '<p>活动描述:' . $activityRow['actdes'] . '</p>';
-                if ($activityRow['approved'] == 0) {
-                    echo '活动状态: 审核中<br />';
-                }
-                elseif ($activityRow['approved'] == 1) {
-                    echo '活动状态:审核通过<br />';
-                }
-            echo '</div>';
-            echo '</div>';
-        $activityCount++;
-        }
-        if (!($activityRow = mysqli_fetch_array($activityData))) {
-            echo '<div class="row">';
-            echo '<div class="col-xs-7">';
-                echo '<a href = "activity_create.php"><image src = "image/plus1" alt="pic1" width="510" height="350" class="pic1" /></a>';
-            echo '</div>';
-            echo '<div class="col-xs-4">';
-            if ($activityCount > 0) {
-                echo '创建一个活动吧！';
-            }
-            else 
-               echo '还没有新的活动正在进行中，赶快创建一个吧';
-            echo '</div>';
-            echo '</div>';
-        }
+    if (isset($name)) {
+     echo '<script type="text/javascript">';
+        echo 'window.location="presentdetail.php"';
+     echo '</script>';
     }
-    else {
-        echo 'no users club';
-    }
-     ?>
+    else{
+                $presentQuery = "SELECT * FROM present";
+                $presentData = mysqli_query($dbc,$presentQuery);
+                $presentCount = 0;
+                while (($presentRow = mysqli_fetch_array($presentData))) {
+                    if ($presentCount <= 1) {
+                         echo '<div class="row">';
+                            echo '<div class="col-xs-7">';
+                                $presentpic = $presentRow['presentpic'];
+                                
+                                echo '<img src="' . GW_UPLOADPATH . $presentpic . '"width="510" height="350" class="pic1" alt="pic1" />';
+                            echo '</div>';
+                            echo '<div class="col-xs-4">';
+                                echo '<form method="get" presention="present_mypresent_delete.php">';
+                                echo '<input name="presentid" type="hidden" value="' . $presentRow['presentid'] . '">';
+                              //  echo '<button type="" value="删除" class="delete" href="present_mypresent_delete.php">删除</button>';
+                                echo '</form>';
+                                echo '<p>礼品编号:' . $presentRow['presentid'] . '</p>';
+                                echo '<p>礼品名称:' . $presentRow['presentname'] . '</p>';
+                                echo '<p>礼品描述:' . $presentRow['presentdescription'] . '</p>';
+                        
+                            echo '</div>';
+                            echo '</div>';
+                            $presentCount++;
 
-     <button type="submit" value="更多" id="more">更多</button>
+                        if ($presentCount == 2) {
+                       echo '<div id="divContent" style="display:none">';
+                         }
+                    }
+                
+                    
+                    else{  
+                            echo '<div class="row">';
+                            echo '<div class="col-xs-7">';
+                                $presentpic = $presentRow['presentpic'];
+                                
+                                echo '<img src="' . GW_UPLOADPATH . $presentpic . '"width="510" height="350" class="pic1" alt="pic1" />';
+                            echo '</div>';
+                            echo '<div class="col-xs-4">';
+                                echo '<form method="get" presention="present_mypresent_delete.php">';
+                                echo '<input name="presentid" type="hidden" value="' . $presentRow['presentid'] . '">';
+                              //  echo '<button type="" value="删除" class="delete" href="present_mypresent_delete.php">删除</button>';
+                                echo '</form>';
+                                echo '<p>活动编号:' . $presentRow['presentid'] . '</p>';
+                                echo '<p>礼品名称:' . $presentRow['presentname'] . '</p>';
+                                echo '<p>礼品描述:' . $presentRow['presentdescription'] . '</p>';
+                        
+                            echo '</div>';
+                            echo '</div>';
+                            $presentCount++;
+
+
+                    }
+                }
+                echo '</div>';
+                echo '<button type="button" value="更多" id="more">更多</button>';
+    }
+    
+
+       
+     
+     ?>
+             
 
     <?php require_once('footer.php'); ?>
     

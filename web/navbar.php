@@ -29,7 +29,7 @@
             <a type="button" class="btn btn-link" href="index.php">首页</a>
             <a type="button" class="btn btn-link" href="#note">公告</a>
             <a type="button" class="btn btn-link" href="activityall.php">活动</a>
-            <a type="button" class="btn btn-link" href="present.php">礼品</a>
+            <a type="button" class="btn btn-link" href="presentall.php">礼品</a>
             <a type="button" class="btn btn-link" >绩效</a>
             <a type="button" class="btn btn-link" id="navright-show" href="personshow.php">展示</a>
            

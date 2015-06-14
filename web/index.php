@@ -194,9 +194,11 @@
                 </a>';
                 $count++;
               }
+              mysqli_close($dbc);
 
           
          ?>
+         </div>
           </div><!--end div container-->
 
             

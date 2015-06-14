@@ -17,7 +17,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/activity_create.css" rel="stylesheet">
+   
+    <link rel="stylesheet" type="text/css" href="css/presentrequest.css">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -47,15 +48,15 @@
     </script>
   </head>
 
-  <body>
+  <body style="background-color: #f9f9f9;">
      <h1>礼品申请创建</h1>
 
     <?php
       require_once('appvars.php');
 
       if (isset($_POST['submit'])) {    
-        $presentid = $_POST['presentid'];
-        $actid = $_POST['actid'];
+        $presentname = $_POST['presentid'];
+        $actname = $_POST['actid'];
         $presentrequestdate = $_POST['presentrequestdate'];
         $amount = $_POST['amount'];
         $presentrequestreason =$_POST['presentrequestreason'];
@@ -65,9 +66,7 @@
 //        $picture_type = $_FILES['picture']['type'];
 //        $picture_size = $_FILES['picture']['size'];
     
-
-
-        if (!empty($presentid) && !empty($actid) && !empty($presentrequestdate) && !empty($presentrequestcreater) && !empty($presentrequestreason) && !empty($amount)) {
+        if (!empty($presentname) && !empty($actname) && !empty($presentrequestdate) && !empty($presentrequestcreater) && !empty($presentrequestreason) && !empty($amount)) {
                 require_once('conn.php');
                 $queryMaxId = "select max(presentrequestid) as maxId from presentrequest";
     
@@ -75,9 +74,20 @@
                 $id = 0;
                 if (($row = mysqli_fetch_array($data))) {
                   $id = $row['maxId'] + 1;
-                }               
+                }     
+                $queryactivity = "SELECT * FROM activity WHERE actname = '$actname'"; 
+                           $dataactivity = mysqli_query($dbc,$queryactivity);
+                if ($rowactivity = mysqli_fetch_array($dataactivity)) {
+                         $actid = $rowactivity['actid'];
+                       }   
+                $querypresent = "SELECT * FROM present WHERE presentname = '$presentname'"; 
+                $datapresent = mysqli_query($dbc,$querypresent);
+                if ($rowpresent = mysqli_fetch_array($datapresent)) {
+                         $presentid = $rowpresent['presentid'];
+                       }       
+    
 
-                $query = "insert into presentrequest(presentrequestid,presentid,actid,presentrequestdate,presentrequestcreater,presentrequestreason,approved,presentrequestreport,amount) values ($id,'$presentid','$actid','$presentrequestdate','$presentrequestcreater','$presentrequestreason',0,0,'$amount')"; 
+                $query = "insert into presentrequest(presentrequestid,presentid,actid,presentrequestdate,presentrequestcreater,presentrequestreason,approved,presentrequestreport,amount) values ($id,'$presentid','$actid','$presentrequestdate','$presentrequestcreater','$presentrequestreason',0,0,$amount)"; 
             
                   mysqli_query($dbc,$query);
 

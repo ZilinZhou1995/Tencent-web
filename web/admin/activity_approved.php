@@ -36,6 +36,8 @@
 
   				$query = "UPDATE activity SET approved = 1,actreport = 1 WHERE actid = $id";
   				mysqli_query($dbc,$query);
+
+  		
   				mysqli_close($dbc);
 
   				echo '<p>' . $club . '创建的' . $name . '活动' . '审核通过</p>';

@@ -73,7 +73,7 @@ require_once('sessionstart.php');
 		 						}	
 		 						echo '</form>';
 		 						echo '</div>';
-		 						mysqli_close($dbc);
+		 						//mysqli_close($dbc);
 		 			 ?>
 		 	</div>
 		 						
@@ -170,14 +170,36 @@ require_once('sessionstart.php');
 		 	<div class="row">
 		 		<div class="col-xs-5">
 		 			<h4>近期活动消息</h4>
-		 			<div class="row">
-		 			<div class="col-xs-7"><img src="image/sample3.png" width="100%" alt="rencentact" /></div>
+		 			<a href="activitydetail.php"><div class="row">
+		 			<?php 
+			
+						require_once('conn.php');
+						$name = $_SESSION['name'];
+						$queryPersonalInfo = "SELECT * FROM users WHERE account = '$name'";		 
+						$personaldata = mysqli_query($dbc,$queryPersonalInfo);
+						if ($person = mysqli_fetch_array($personaldata)) {
+							$myclub = $person['club'];
+							$activityQuery = "SELECT * FROM activity WHERE actclub = '$myclub'";
+							$activityData = mysqli_query($dbc,$activityQuery);
+							$activityCount = 0;
+							//echo '<div id="show">';
+							if ($activityRow = mysqli_fetch_array($activityData)) {
+								
+								$actpic = $activityRow['actpic'];
+								echo '<div class="col-xs-7"><img src="' . GW_UPLOADPATH . $actpic . '" width="100%" alt="pic1" /></div>';
+							$activityCount++;
+							}
+						}
+						else {
+							echo 'no users club';
+						}	
+					?>
 		 			<div class="col-xs-5"><img src="image/plus2.png" width="100%" alt="add" /></div>	
-		 			</div>
+		 			</div></a>
 		 			
 		 			<div class="row">
-		 			<div class="col-xs-7">活动名称</div>
-		 			<div class="col-xs-5">创建活动</div>
+		 			<div class="col-xs-7"><?php echo $activityRow['actname']; ?></div>
+		 			<a href="#activity"><div class="col-xs-5">创建活动</div></a>
 		 			</div>
 		 		</div> 
 
@@ -185,23 +207,42 @@ require_once('sessionstart.php');
 		 			<small class="pull-right">更多</small>
 		 			<h4>公告</h4>
 
-		 		<div class="row">
-			 		<a href="#">
-			 		<div class="col-xs-5 note-transform">
-			 		      <h5>公告标题</h5>
-			 		      <small>2015.4.3</small>
-			 		      <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-			 		      <p class="note-transform-p">详情→</p>
-			 		 </div>
-			 		 </a>
-			 		 <a href="#">
+				 <div class="row">
+				 <?php 
+				 	require_once('conn.php');
+
+				 	$queryNote = "SELECT * FROM note WHERE noteindex = 1";
+				 	$dataNote = mysqli_query($dbc,$queryNote);
+				 	$notecount = 0;
+				 	while ($rowNote = mysqli_fetch_array($dataNote)) {
+				 		if ($notecount < 2) {
+				 			echo '<a href="#">';
+					 		echo '<div class="col-xs-5 note-transform">';
+					 		      echo '<h5>' . $rowNote['noteheader'] . '</h5>';
+					 		      echo '<small>' . $rowNote['notedate'] . '</small>';
+					 		      echo '<p class="note-margin">' .$rowNote['notecontent'] .'</p>';
+					 		      echo '<p class="note-transform-p">详情→</p>';
+					 		 echo '</div>';
+					 		 echo '</a>';
+					 		 $notecount++;
+				 		}
+				 	}
+
+				 	while ($notecount < 2) {
+				 		
+			 		echo  '<a href="#">
 			 		<div class="col-xs-5 col-xs-offset-1 note-transform">
 			 		      <h5>公告标题</h5>
 			 		      <small>2015.4.3</small>
 			 		      <p class="note-margin">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 			 		      <p class="note-transform-p">详情→</p>
 			 		 </div>
-			 		 </a>
+			 		 </a>';
+			 		 $notecount++;
+				 	}
+				 	
+				  ?>
+			 		
 			 	</div>
 
 		 		</div><!--end div col-xs-5 col-xs-offset-1-->

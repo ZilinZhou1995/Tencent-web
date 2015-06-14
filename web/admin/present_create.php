@@ -58,7 +58,7 @@
 									$id = $row['maxId'] + 1;
 								}								
 
-  							$query = "insert into present(presentid,presentname,presentdate,presentamount,presentcreater,presentdescription,presentpic) values ('$id','$presentname','$date','$amount','$creater','$description','picture')";	
+  							$query = "insert into present(presentid,presentname,presentdate,presentamount,presentcreater,presentdescription,presentpic) values ('$id','$presentname','$date','$amount','$creater','$description','$picture')";	
                   mysqli_query($dbc,$query);
 
   							  	echo '<p>创建了一个新礼品！</p>';

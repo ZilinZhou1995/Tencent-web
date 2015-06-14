@@ -41,9 +41,9 @@
 			<h1>活动</h1>
     		<div class="row sidenav nav-button">
     				
-    				<button class="btn-act nav-button"><a href="#">活动</a></button>
-    				<button class="btn-sup nav-button"><a href="#">物料</a></button>
-    				<button class="btn-pro nav-button"><a href="#">绩效</a></button>
+                    <button class="btn-act nav-button"><a href="activitydetail.php">活动</a></button>
+                    <button class="btn-sup nav-button"><a href="presentdetail.php">礼品</a></button>
+                    <button class="btn-pro nav-button"><a href="#">绩效</a></button>
     		</div>
     </div>
     
