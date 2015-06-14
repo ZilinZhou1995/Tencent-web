@@ -112,7 +112,7 @@
              echo'<th>公告日期</th>';
              echo'<th>公告创建人</th>';
              echo'<th>公告内容</th>';
-             echo'<th><a href="note_delete.php?noteid=' . $row['noteid'] . '">是否删除</a></th>';
+             echo'<th>是否删除</th>';
              echo'<th>是否首页</th>';
              echo '</tr>';
              echo '</thead>';

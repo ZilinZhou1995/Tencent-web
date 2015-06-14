@@ -115,36 +115,14 @@ require_once('sessionstart.php');
 
 		 		<div class="col-xs-2 sidenav">
 		 		    <div class="row">
-			 		<button class="btn-act"><a href="#">我的申请</a></button>
-			 		<button class="btn-sup"><a href="activity_create.php">礼品申请</a></button>
-			 		<button class="btn-pro"><a href="#">礼品反馈</a></button>
+			 		<button class="btn-act"><a href="presentrequest_mypre.php" target="presentrequestchange">我的申请</a></button>
+			 		<button class="btn-sup"><a href="presentrequest_create.php" target="presentrequestchange">礼品申请</a></button>
+			 		<button class="btn-pro"><a href="presentrequest_report.php" target="presentrequestchange">礼品反馈</a></button>
 			 		</div>
 		 		</div>
 		 		
 		 		<div class="col-xs-9">
-			 			<div class="row">
-				 			<div class="col-xs-4">
-				 				<img src="image/sample4.png" class="pic1" width="80%" alt="pic1" />
-				 			</div>
-				 			<div class="col-xs-8">
-				 				礼品名称:<br />
-				 				申请人:<br />
-				 				礼品名称:<br />
-				 				礼品状态:<br />
-				 			</div>
-			 			</div>
-		 			
-		 				<div class="row">
-		 					<div class="col-xs-4">
-		 						<img src="image/plus1.png" class="pic1" width="80%" alt="pic2" />
-		 					</div>
-		 					<div class="col-xs-8">
-		 						礼品名称:<br />
-		 						申请人:<br />
-		 						礼品名称:<br />
-		 						礼品状态:<br />
-		 					</div>
-		 				</div>
+			 			<iframe height="90%" width="100%" scrolling="no" frameborder="0" src="presentrequest_mypre.php" name="presentrequestchange"></iframe>
 		 		</div>
 		 	</div>
 		 </div><!--present-->

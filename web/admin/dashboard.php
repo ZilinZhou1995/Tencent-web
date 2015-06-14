@@ -8,7 +8,7 @@
     <meta name="description" content="">
 
     <meta name="author" content="">
-    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+    <link rel="icon" href="../favicon.ico">
 
     <title>管理员平台</title>
 
@@ -45,9 +45,9 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../index.php">主页</a></li>
-            <li><a href="http://v3.bootcss.com/examples/dashboard/#">设置</a></li>
-            <li><a href="http://v3.bootcss.com/examples/dashboard/#">个人信息</a></li>
-            <li><a href="http://v3.bootcss.com/examples/dashboard/#">帮助</a></li>
+            <li><a href="#">设置</a></li>
+            <li><a href="#">个人信息</a></li>
+            <li><a href="#">帮助</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">

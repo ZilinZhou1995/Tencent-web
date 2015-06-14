@@ -9,7 +9,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
     <title>xianfengdui</title>
 
@@ -18,6 +18,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
+    <linkrel="shortcut icon" href="favicon.ico">
+    <linkrel="Bookmark" href="favicon.ico">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

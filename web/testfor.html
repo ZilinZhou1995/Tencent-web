@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>测试jquery环境是否安装成功</title> 
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript"> 
+if(jQuery)
+{
+    jQuery(document).ready(function(){
+        jQuery('p').addClass('tmpFrameworkLoaded');
+        jQuery('p').text('jQuery succcessfully loaded and running!');
+    });
+} 
+</script> 
+<style type="text/css"> 
+body
+{
+    font:16px sans-serif;
+}
+p
+{
+    color:red;
+    border:1px solid red;
+    padding:5px;
+    margin:5px;
+}
+p.tmpFrameworkLoaded
+{
+    color:green;
+    border:1px solid green;
+}
+</style> 
+</head> 
+<body> 
+    <p>
+        jQuery is not  load
+    </p>
+</body> 
+</html>  
